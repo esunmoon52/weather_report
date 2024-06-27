@@ -45,11 +45,11 @@ View the Plot:
 
 ## Functions
 
-fetch_weather_data(url, params): Fetches weather data from the NCEI API using the specified URL and parameters.
-init_data_dicts(): Initializes dictionaries to store daily weather data.
-populate_daily_data(data, daily_high, daily_low, daily_wind, monthly_dp): Populates the daily data dictionaries with the fetched weather data.
-calculate_statistics(daily_data): Calculates the average, 90th percentile, and 10th percentile of daily data.
-smooth_data(data, window_length=31, polyorder=1): Smooths the data using the Savitzky-Golay filter.
-calculate_average(values_list, length, is_max=True): Calculates the average of maximum or minimum values from the provided list.
-plot_temperature_data(dates, smoothed_highs, smoothed_lows, smoothed_avg_high, smoothed_avg_low, maxHigh, minHigh, maxLow, minLow, title): Plots the temperature data.
+- fetch_weather_data(url, params): Fetches weather data from the NCEI API using the specified URL and parameters.
+- init_data_dicts(): Initializes dictionaries to store daily weather data.
+- populate_daily_data(data, daily_high, daily_low, daily_wind, monthly_dp): Populates the daily data dictionaries with the fetched weather data.
+- calculate_statistics(daily_data): Calculates the average, 90th percentile, and 10th percentile of daily data.
+- smooth_data(data, window_length=31, polyorder=1): Smooths the data using the Savitzky-Golay filter.
+- calculate_average(values_list, length, is_max=True): Calculates the average of maximum or minimum values from the provided list.
+- plot_temperature_data(dates, smoothed_highs, smoothed_lows, smoothed_avg_high, smoothed_avg_low, maxHigh, minHigh, maxLow, minLow, title): Plots the temperature data.
 
