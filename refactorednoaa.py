@@ -55,12 +55,12 @@ def calculate_average(values_list, length, is_max=True):
         current_values = [row[i] for row in values_list]
         value = max(current_values) if is_max else min(current_values)
 
-        '''q1 = np.percentile(current_values, 25)
+        q1 = np.percentile(current_values, 25)
         q3 = np.percentile(current_values, 75)
         iqr = q3 - q1
-        lower_bound = q1 - (3 * iqr)
-        upper_bound = q3 + (3 * iqr)'''
-        if value != -1: # -1 is default value if JSON data is null
+        lower_bound = q1 - (5 * iqr)
+        upper_bound = q3 + (5 * iqr)
+        if value >= lower_bound and value <= upper_bound: # -1 is default value if JSON data is null
             total += value              
         else:     
             subtract_count += 1    
@@ -141,12 +141,12 @@ def plot_temperature_data(dates, smoothed_highs, smoothed_lows, smoothed_avg_hig
 def main():
     params = {
         'dataset': 'daily-summaries',
-        'startDate': '1991-01-01',
+        'startDate': '1994-01-01',
         'endDate': '2020-12-31',
         'dataTypes': 'TMAX,TMIN,PRCP,AWND,ADPT',
         'units': 'standard',
         'format': 'json',
-        'stations': 'USW00023272' #insert station code here, example used is Station: SAN FRANCISCO DOWNTOWN, CA US
+        'stations': 'USW00003177' #insert station code here, example used is Station: SAN FRANCISCO DOWNTOWN, CA US
     }
 
     weather_data = fetch_weather_data(API_URL, params)
