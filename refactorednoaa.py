@@ -60,7 +60,7 @@ def calculate_average(values_list, length, is_max=True):
         iqr = q3 - q1
         lower_bound = q1 - (5 * iqr)
         upper_bound = q3 + (5 * iqr)
-        if value >= lower_bound and value <= upper_bound: # -1 is default value if JSON data is null
+        if value >= lower_bound and value <= upper_bound:
             total += value              
         else:     
             subtract_count += 1    
