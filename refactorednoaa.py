@@ -201,12 +201,12 @@ def plot_temperature_data(dates, smoothed_highs, smoothed_lows, smoothed_avg_hig
 def main():
     params = {
         'dataset': 'daily-summaries',
-        'startDate': '1984-01-01',
-        'endDate': '2013-12-31',
+        'startDate': '1991-01-01',
+        'endDate': '2020-12-31',
         'dataTypes': 'TMAX,TMIN,PRCP,AWND,ADPT',
         'units': 'standard',
         'format': 'json',
-        'stations': 'USC00043244' #insert station code here, example used is Station: SAN JOSE, CA US
+        'stations': 'USW00023169' #insert station code here, example used is Station: SAN JOSE, CA US
     }
 
     weather_data = fetch_weather_data(API_URL, params)
