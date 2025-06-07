@@ -201,8 +201,8 @@ def plot_temperature_data(dates, smoothed_highs, smoothed_lows, smoothed_avg_hig
 def main():
     params = {
         'dataset': 'daily-summaries',
-        'startDate': '1991-01-01',
-        'endDate': '2020-12-31',
+        'startDate': '1950-01-01',
+        'endDate': '1979-12-31',
         'dataTypes': 'TMAX,TMIN,PRCP,AWND,ADPT',
         'units': 'standard',
         'format': 'json',
